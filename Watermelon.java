@@ -33,11 +33,11 @@ public class Watermelon extends Fruit {
 				System.out.printf("%-24s: RM%.2f%n", ">>>Total price", calculatePrice());
 			
 			}else if((weight >= 2)&&(weight <= 4)) {
-				double pr = pricePerKg * (1- wat.discountRate());
+				double pr = pricePerKg * (1- wat.discountRate()); //10% discount
 				calculatePrice(pr);
 				System.out.printf("%-24s: RM%.2f%n", ">>>Total price", calculatePrice(pr));			
 			}else {
-				double pr = pricePerKg * (1- wat.discountRate() * 2);
+				double pr = pricePerKg * (1- wat.discountRate() * 2); //20% discount
 				double w = this.weight;
 				calculatePrice(pr, w);
 				System.out.printf("%-24s: RM%.2f%n", ">>>Total price", calculatePrice(pr,w));			

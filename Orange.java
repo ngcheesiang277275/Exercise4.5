@@ -35,12 +35,12 @@ public class Orange extends Fruit {
 		if(amount < 5) {
 			System.out.printf("%-24s: RM%.2f", ">>>Total price", calculatePrice());		
 		}else if((amount >= 5) && (amount < 10)) {
-			double pr = price * (1-orange.discountRate()); //20%discount
+			double pr = price * (1-orange.discountRate()); //5%discount
 			System.out.printf("%-24s: RM%.2f%n", ">>>Original price", calculatePrice());		
 			System.out.printf("%-24s: RM%.2f", ">>>Discount price", calculatePrice(pr));	
 
 		}else {
-			double pr = price * (1-orange.discountRate() * 2); //30%discount
+			double pr = price * (1-orange.discountRate() * 2); //10%discount
 			int a = this.amount;
 			System.out.printf("%-24s: RM%.2f%n", ">>>Original price", calculatePrice());		
 			System.out.printf("%-24s: RM%.2f", ">>>Discount price", calculatePrice(pr, a));		
