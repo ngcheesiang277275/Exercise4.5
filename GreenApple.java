@@ -1,10 +1,10 @@
-package Ex4_2;
+package Exercise4_5;
 
 //Subclass of Apple
-class GreenApple extends Apple {
-	protected String colour;
-	protected double price;
+public class GreenApple extends Apple {
+	private String colour;
 	private int serving;
+	private int numOfApple;
 	
 	//parameterized constructor
 	public GreenApple(String name, String flavour, String type, String colour) {
@@ -20,7 +20,7 @@ class GreenApple extends Apple {
 	public String toString() {
 		return ("\nFruit\t\t\t: " + getName() + 
 				"\nFlavour\t\t\t: " + flavour + 
-				"\nType available\t\t: " + type +
+				"\nType \t\t\t: " + type +
 				"\nColour\t\t\t: " + colour);
 	}
 	
@@ -30,12 +30,11 @@ class GreenApple extends Apple {
 		System.out.print("Enter number of servings: ");
 		this.serving = s.nextInt();
 		
-		System.out.println("Ingredients needed: \n1. " + (this.serving *2) + " apples\n2. "+ (0.1 * this.serving) + "kg Spinach\n3. "+ (this.serving) +" Cucumber\n4. Lemon");
+		this.numOfApple = this.serving * 2; 
+		System.out.println("\nIngredients needed for\n >>> "+ this.serving + " GREEN APPLE DETOX JUICE: \n1. " + this.numOfApple + " apples\n2. "+ (this.serving * 0.1) + "kg Spinach\n3. "+ (this.serving) +" Cucumber\n4. Lemon");
 		System.out.println("----------Recipe----------");
 		System.out.println("1. Wash all the ingredients and remove the apple core.\n2. Cut the apples.\n3. Blend the apples with spinach and cucumber.\n" +
-							"4.Strain the juice and add some lemon juice.");	
-		System.out.println("-----------------------------------------");
-
+							"4. Strain the juice and add some lemon juice.\n");	
 	}
 	
 }

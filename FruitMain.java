@@ -1,7 +1,7 @@
-package Ex4_2;
+package Exercise4_5;
 
 //Main class
-class FruitMain {
+public class FruitMain {
 	public static void main(String[] args) {
 		
 		Watermelon a = new Watermelon("Watermelon", "Red", 22);
@@ -15,6 +15,9 @@ class FruitMain {
 
 		RedApple d = new RedApple("Red Apple", "Sweet", "Pink Lady" , "Red");
 		System.out.println(d);
+		
+		Orange e = new Orange("Orange", "Sweet and sour", "Navel Orange");
+		System.out.println(e);
 
 	}
 }
